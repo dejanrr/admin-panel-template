@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list-btn {
+  background-color: #673AB7;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 8px;
+  font-size: 16px;
+  border: 1px solid #B39DDB;
+  padding: 10px;
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end;
 }
 
-.App-link {
-  color: #61dafb;
+.list-btn-container {
+  margin: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* .homeWidgets {
+  display: flex;
+  margin: 20px;
+} */
+
+/* @media only screen and (max-width: 768px) {
+  .featured {
+    flex-direction: column;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .featured span {
+    margin: auto;
   }
-}
+
+  .featuredMoneyContainer {
+    flex-direction: column;
+  }
+} */

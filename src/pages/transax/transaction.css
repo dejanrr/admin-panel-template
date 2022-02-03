@@ -1,0 +1,67 @@
+.transaction-table {
+  width: 95%;
+  box-shadow: rgb(159 162 191 / 18%) 0px 9px 16px,
+    rgb(159 162 191 / 32%) 0px 2px 2px;
+  border-radius: 12px;
+  margin: auto;
+  padding-bottom: 70px;
+}
+
+.transaction-table div {
+  padding: 5px;
+}
+
+.table-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgba(34, 51, 84, 0.1);
+}
+
+.row-headers {
+  color: #223354b3;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #fbfbfc;
+}
+
+.cell {
+  width: 20%;
+  margin: auto;
+  text-align: center;
+}
+
+.source-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-button.Approved {
+  background-color: #e5faf2;
+  color: #3bb077;
+}
+.transaction-button.Declined {
+  background-color: #fff0f1;
+  color: #d95087;
+}
+.transaction-button.Pending {
+  background-color: #ebf1fe;
+  color: #2a7ade;
+}
+
+@media only screen and (max-width: 900px) {
+  .row-headers {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .row {
+    flex-direction: column;
+  }
+}

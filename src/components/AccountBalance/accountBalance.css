@@ -1,0 +1,117 @@
+.balance-wrapper {
+  display: flex;
+  flex: 2;
+  flex-direction: row;
+  box-shadow: rgb(159 162 191 / 18%) 0px 9px 16px,
+    rgb(159 162 191 / 32%) 0px 2px 2px;
+  border: 0.0625rem solid rgba(46, 54, 80, 0.125);
+  border-radius: 12px;
+}
+
+.balance-left {
+  flex: 1;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.balance-right {
+  flex: 1;
+  margin-right: 30px;
+}
+
+.balance-title {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #223354;
+}
+
+.current-balance {
+  margin-top: 50px;
+}
+
+.balance-cash {
+  font-size: 50px;
+  font-weight: 700;
+  color: #223354;
+}
+
+.balance-btc {
+  color: #223354b3;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.stocks {
+  display: flex;
+  margin-top: 50px;
+  flex-direction: row;
+}
+
+.stocks-cash {
+  color: #223354;
+  font-weight: 800;
+}
+
+.stocks-month {
+  color: #223354b3;
+  font-weight: 500;
+}
+
+.account-info {
+  margin-top: 40px;
+}
+
+.account-title {
+  text-transform: uppercase;
+  color: #223354b3;
+  font-weight: 500;
+}
+
+.account-email {
+  margin-top: 10px;
+  color: #223354b3;
+  font-weight: 700;
+}
+
+.btc-values {
+  margin-top: 30px;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.btc-row {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+}
+
+.btc-left-box {
+  flex: 1;
+}
+
+.btc-left-box {
+  flex: 2;
+}
+
+.btc-box-top {
+  margin-top: 70px;
+}
+
+.btc-title {
+  font-weight: 700;
+  color: #223354;
+}
+
+.btc-sub-title {
+  font-weight: 400;
+  color: #223354b3;
+}
+
+.balance-profit {
+  color: #00d68f;
+}
+
+.balance-loss {
+  color: #ff3d71;
+}

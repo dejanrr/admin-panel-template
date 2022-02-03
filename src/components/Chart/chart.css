@@ -1,0 +1,15 @@
+.chart {
+  margin: 20px;
+  padding: 20px;
+  box-shadow: rgb(159 162 191 / 18%) 0px 9px 16px,
+    rgb(159 162 191 / 32%) 0px 2px 2px;
+  border: 0.0625rem solid rgba(46, 54, 80, 0.125);
+  border-radius: 12px;
+  font-size: 20px;
+  color: #121828;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.chartTitle {
+  margin-bottom: 20px;
+}

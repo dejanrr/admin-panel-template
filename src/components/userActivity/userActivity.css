@@ -1,0 +1,47 @@
+.user-activity {
+  flex: 1;
+  box-shadow: rgb(159 162 191 / 18%) 0px 9px 16px,
+    rgb(159 162 191 / 32%) 0px 2px 2px;
+  border: 0.0625rem solid rgba(46, 54, 80, 0.125);
+  border-radius: 12px;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+.user-activity-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.user-activity-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user-activity-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px;
+}
+
+.active-user {
+  display: flex;
+  flex-direction: column;
+}
+
+.active-user-title {
+  font-weight: 600;
+}
+
+.visits {
+  font-weight: 600;
+  color: #00d68f;
+}
+
+@media only screen and (max-width: 768px) {
+  .widgetSm {
+    width: 100%;
+  }
+}

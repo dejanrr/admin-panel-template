@@ -1,0 +1,29 @@
+.new-user {
+  padding-bottom: 70px;
+  width: 100%;
+}
+
+.new-user-form {
+  margin: 10px 0 0 30px;
+}
+
+.new-user-item {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.new-user-item > label {
+  color: gray;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.new-user-item > input {
+  padding: 10px;
+}
+
+.new-user-item > select {
+  padding: 10px;
+}
