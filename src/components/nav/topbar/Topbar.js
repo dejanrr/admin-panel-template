@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { AdminPanelContext } from "../../../Context/AdminPanelContext";
+import { useContext } from "react";
 import "./topbar.css";
-import { NotificationsNone, Language, Settings } from "@material-ui/icons";
 import MenuIcon from "@mui/icons-material/Menu";
 import avatar from "../../../assets/images/avatar.png";
 
-export default function Topbar() {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+const Topbar = () => {
+  const { setNavbarOpen } = useContext(AdminPanelContext);
 
   const handleToggle = () => {
     setNavbarOpen((prev) => !prev);
@@ -13,26 +13,20 @@ export default function Topbar() {
 
   return (
     <div className="topbar">
-      <div className="topbarWrapper">
-        <div className="topLeft">
+      <div className="topbar-wrapper">
+        <div className="top-left">
           <span className="logo">Admin Dashboard</span>
         </div>
-        <div className="topRight">
-          <div className="topbarIconContainer menuIcon" onClick={handleToggle}>
+        <div className="top-right">
+          <div className="topbar-icon-container menu-icon" onClick={handleToggle}>
             <MenuIcon />
           </div>
 
-          <div className="toggle-menu">
-            <ul>
-              <li>Item</li>
-              <li>Item</li>
-              <li>Item</li>
-              <li>Item</li>
-            </ul>
-          </div>
-          <img src={avatar} alt="" className="topAvatar" />
+          <img src={avatar} alt="" className="top-avatar" />
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Topbar;

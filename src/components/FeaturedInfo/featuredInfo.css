@@ -15,14 +15,15 @@
   background-color: #fff;
   background-clip: border-box;
   border-radius: 8px;
-  box-shadow: 0px 1px 1px rgb(100 116 139 / 6%), 0px 1px 2px rgb(100 116 139 / 10%);
+  box-shadow: 0px 1px 1px rgb(100 116 139 / 6%),
+    0px 1px 2px rgb(100 116 139 / 10%);
 }
 
 .featuredTitle {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #65748B;
+  color: #65748b;
 }
 
 .featuredMoneyContainer {
@@ -45,24 +46,24 @@
 .featuredIcon {
   font-size: 14px;
   margin-left: 5px;
-  color: #00D68F;
+  color: #00d68f;
 }
 
 .featuredIcon.negative {
-  color: #FF3D71;
+  color: #ff3d71;
 }
 
 .featuredSub {
   font-size: 15px;
-  color:#65748B;
+  color: #65748b;
 }
- 
+
 @media only screen and (max-width: 768px) {
   .featured {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .featuredItem {
     margin: 0;
   }
@@ -79,10 +80,12 @@
 @media only screen and (max-width: 1366px) {
   .featured {
     flex-direction: column;
+    overflow: hidden;
   }
 
   .featuredItem {
     text-align: center;
+    width: 100%;
   }
 
   .featuredMoneyContainer {

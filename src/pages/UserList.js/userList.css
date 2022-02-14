@@ -14,7 +14,6 @@
   height: 32px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 10px;
 }
 
 .userListEdit {
@@ -34,4 +33,9 @@
 
 .username {
   cursor: pointer;
+}
+
+.supervisors {
+  align-items: center;
+  text-align: center;
 }

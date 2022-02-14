@@ -48,7 +48,7 @@ const NewUser = () => {
             <input
               type="number"
               value={userTransaction}
-              placeholder="Email"
+              placeholder="Amount"
               onChange={(e) => {
                 setUserTransaction(e.target.value);
               }}

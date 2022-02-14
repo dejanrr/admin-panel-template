@@ -42,25 +42,12 @@
   flex-direction: column;
 }
 
-.transaction-button.Approved {
-  background-color: #e5faf2;
-  color: #3bb077;
-}
-.transaction-button.Declined {
-  background-color: #fff0f1;
-  color: #d95087;
-}
-.transaction-button.Pending {
-  background-color: #ebf1fe;
-  color: #2a7ade;
-}
-
 @media only screen and (max-width: 900px) {
   .row-headers {
     display: flex;
     flex-direction: row;
   }
-  
+
   .row {
     flex-direction: column;
   }

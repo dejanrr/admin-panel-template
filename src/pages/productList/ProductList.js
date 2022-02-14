@@ -1,7 +1,4 @@
 import React, { useContext } from "react";
-import { product, productRows } from "../../components/Chart/dummyData";
-import { Link } from "react-router-dom";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import productImage from "../../assets/images/airJordan.jpg";
 import newProductImg from "../../assets/images/newimg.png";
@@ -10,22 +7,10 @@ import "./productList.css";
 
 const ProductList = () => {
   const {
-    productState,
-    setProductState,
-    productName,
-    setProductName,
-    productStock,
-    setProductStock,
-    productPrice,
-    setProductPrice,
     newProducts,
-    setNewProducts,
-    data,
-    setData,
-    products,
-    setProducts,
-    newProductId,
-    setNewProductId,
+    productRowsList,
+    removeProduct,
+    removeNewProduct,
   } = useContext(AdminPanelContext);
 
   const productNavigate = useNavigate();
@@ -48,38 +33,53 @@ const ProductList = () => {
           </div>
         </div>
         <div className="row row-headers">
-          <div className="cell"></div>
+          <div className="cell">Image</div>
           <div className="cell">Product</div>
           <div className="cell">Stock</div>
           <div className="cell">ID</div>
           <div className="cell">Price</div>
+          <div className="cell">Action</div>
         </div>
-        {products.map((productsMapped, id) => {
-          return (
-            <div>
-              <div className="row">
-                <div className="cell">
-                  <img
-                    src={productImage}
-                    alt="productImg"
-                    className="list-img"
-                  />
-                </div>
-                <div
-                  key={id}
-                  className="cell productName"
-                  onClick={() => productNavigate("/product")}
-                >
-                  {productsMapped.name}
-                </div>
+        {productRowsList?.length || newProducts?.length ? (
+          productRowsList.map((productsMapped, id) => {
+            return (
+              <div>
+                <div className="row">
+                  <div className="cell">
+                    <img
+                      src={productImage}
+                      alt="productImg"
+                      className="list-img"
+                    />
+                  </div>
+                  <div
+                    key={id}
+                    className="cell productName"
+                    onClick={() => productNavigate("/product")}
+                  >
+                    {productsMapped.name}
+                  </div>
 
-                <div className="cell">{productsMapped.stock}</div>
-                <div className="cell">{productsMapped.id}</div>
-                <div className="cell">{productsMapped.price}</div>
+                  <div className="cell">{productsMapped.stock}</div>
+                  <div className="cell">{productsMapped.id}</div>
+                  <div className="cell">{productsMapped.price}</div>
+                  <div className="cell">
+                    <button
+                      className="delete-list-btn"
+                      onClick={() => removeProduct(productsMapped.id)}
+                    >
+                      Delete Product
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })
+        ) : (
+          <div className="row">
+            <div className="cell">No products available</div>
+          </div>
+        )}
 
         {newProducts.map((productItem) => {
           return (
@@ -98,6 +98,14 @@ const ProductList = () => {
                   {productItem.id}
                 </div>
                 <div className="cell">${productItem.price}</div>
+                <div className="cell">
+                  <button
+                    className="delete-list-btn"
+                    onClick={() => removeNewProduct(productItem.id)}
+                  >
+                    Delete Product
+                  </button>
+                </div>
               </div>
             </div>
           );

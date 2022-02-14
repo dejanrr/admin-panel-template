@@ -1,7 +1,5 @@
 import "./newProduct.css";
 import React, { useContext } from "react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
 import { AdminPanelContext } from "../../Context/AdminPanelContext";
 
 const NewProduct = () => {
@@ -15,7 +13,6 @@ const NewProduct = () => {
     productPrice,
     setProductPrice,
     handleProductsSubmit,
-    setNewProducts,
   } = useContext(AdminPanelContext);
 
   return (

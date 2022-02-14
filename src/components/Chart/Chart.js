@@ -11,8 +11,9 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import { data } from "../../dummyData";
 
-const Chart = ({ data }) => {
+const Chart = () => {
   return (
     <div className="chart">
       <p className="featuredTitle">Total Growth</p>

@@ -1,25 +1,30 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./transaction.css";
-import userImg from "../../assets/images/userImg.png";
-import NewTransaction from "./NewTransaction/NewTransaction";
 import NewTransactionForm from "./NewTransactionForm/NewTransactionForm";
+import { AdminPanelContext } from "../../Context/AdminPanelContext";
 
 const Transaction = () => {
-  const [recipient, setRecipient] = useState("");
-  const [amount, setAmount] = useState("");
-  const [source, setSource] = useState("");
-  const [status, setStatus] = useState("");
-  const [orderId, setOrderId] = useState("");
-  const [orders, setOrders] = useState([]);
-  const [showForm, setShowForm] = useState(false);
-  const [list, setList] = useState(orders);
+  const {
+    recipient,
+    setRecipient,
+    amount,
+    setAmount,
+    source,
+    setSource,
+    status,
+    setStatus,
+    orderId,
+    setOrderId,
+    orders,
+    setOrders,
+    showForm,
+    setShowForm,
+    list,
+    setList,
+  } = useContext(AdminPanelContext);
 
   const popUp = () => {
     setShowForm(!showForm);
-  };
-
-  const Button = ({ type }) => {
-    return <button className={"transaction-button " + type}>{type}</button>;
   };
 
   return (
@@ -33,23 +38,7 @@ const Transaction = () => {
             <button className="list-btn" onClick={popUp}>
               Create Transaction
             </button>
-            {showForm && (
-              <NewTransactionForm
-                recipient={recipient}
-                setRecipient={setRecipient}
-                amount={amount}
-                setAmount={setAmount}
-                setShowForm={setShowForm}
-                orders={orders}
-                setOrders={setOrders}
-                source={source}
-                setSource={setSource}
-                status={status}
-                setStatus={setStatus}
-                orderId={orderId}
-                setOrderId={setOrderId}
-              />
-            )}
+            {showForm && <NewTransactionForm />}
           </div>
         </div>
         <div className="row row-headers">
@@ -57,7 +46,6 @@ const Transaction = () => {
           <div className="cell">Order ID</div>
           <div className="cell">Source</div>
           <div className="cell">Amount</div>
-          <div className="cell">Status</div>
         </div>
         <div className="row">
           <div className="cell">John Doe</div>
@@ -66,9 +54,6 @@ const Transaction = () => {
             Bank Account<span>****5496</span>
           </div>
           <div className="cell">$568.32</div>
-          <div className="cell">
-            <Button type="Approved" />
-          </div>
         </div>
         <div className="row">
           <div className="cell">John Doe</div>
@@ -77,9 +62,6 @@ const Transaction = () => {
             Bank Account<span>****3224</span>
           </div>
           <div className="cell">$327.88</div>
-          <div className="cell">
-            <Button type="Declined" />
-          </div>
         </div>
         <div className="row">
           <div className="cell">John Doe</div>
@@ -88,9 +70,6 @@ const Transaction = () => {
             Bank Account<span>****1124</span>
           </div>
           <div className="cell">$122.00</div>
-          <div className="cell">
-            <Button type="Pending" />
-          </div>
         </div>
         <div className="row">
           <div className="cell">John Doe</div>
@@ -99,26 +78,21 @@ const Transaction = () => {
             Bank Account<span>****6777</span>
           </div>
           <div className="cell">$78.99</div>
-          <div className="cell">
-            <Button type="Approved" />
-          </div>
         </div>
 
         {orders.map((order) => {
           return (
             <div>
-              <NewTransaction
-                name={order.name}
-                currentStatus={status}
-                id={order.id}
-                setOrders={setOrders}
-                orders={orders}
-                order={order}
-                list={list}
-                setList={setList}
-                orderAmount={amount}
-                bankAccount={source}
-              />
+              <div className="row">
+                <div className="cell">{order.name}</div>
+                <div className="cell" style={{ textTransform: "uppercase" }}>
+                  {order.id}
+                </div>
+                <div className="cell">$ {amount}</div>
+                <div className="cell source-cell">
+                  Bank Account<span>{source}</span>
+                </div>
+              </div>
             </div>
           );
         })}

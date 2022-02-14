@@ -1,9 +1,6 @@
 import React, { useContext } from "react";
 import "./products.css";
-import Chart from "../../components/Chart/Chart";
-import { product } from "../../components/Chart/dummyData";
-import { Publish } from "@material-ui/icons";
-import { Link } from "react-router-dom";
+import { product } from "../../dummyData";
 import productImage from "../../assets/images/airJordan.jpg";
 import {
   LineChart,

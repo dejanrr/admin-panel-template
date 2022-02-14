@@ -21,7 +21,7 @@ import {
   radarChartData,
   data01,
   data02,
-} from "./chartsData";
+} from "../../dummyData";
 import "./charts.css";
 
 const style = {

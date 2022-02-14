@@ -1,11 +1,8 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { Link } from "react-router-dom";
 import Topbar from "./components/nav/topbar/Topbar";
 import Sidebar from "./components/nav/sidebar/Sidebar";
-import FeaturedInfo from "./components/FeaturedInfo/FeaturedInfo";
-import Chart from "./components/Chart/Chart";
-import { userData } from "./components/Chart/dummyData";
+import ToggleMenu from "./components/nav/toggleMenu/ToggleMenu";
 import UserList from "./pages/UserList.js/UserList";
 import Home from "./pages/Home/Home";
 import User from "./pages/User/User";
@@ -13,7 +10,7 @@ import Map from "./pages/Map/Map";
 import Calender from "./pages/calender/Calender";
 import Charts from "./pages/charts/Charts";
 import Colors from "./pages/colors/Colors";
-import Transaction from "./pages/transax/Transaction";
+import Transaction from "./pages/transactions/Transaction";
 import Products from "./pages/products/Products";
 import LoaderPage from "./pages/loaderPage/LoaderPage";
 import ProductList from "./pages/productList/ProductList";
@@ -28,6 +25,7 @@ const App = () => {
       <AdminPanelState>
         <Topbar />
         <Sidebar />
+        <ToggleMenu />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/user" element={<User />} />

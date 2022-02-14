@@ -6,16 +6,27 @@
 }
 
 .list-btn {
-  background-color: #673AB7;
+  background-color: #673ab7;
   color: #fff;
   font-weight: 500;
   border-radius: 8px;
   font-size: 16px;
-  border: 1px solid #B39DDB;
+  border: 1px solid #b39ddb;
   padding: 10px;
   cursor: pointer;
   display: flex;
   justify-content: flex-end;
+}
+
+.delete-list-btn {
+  background-color: #673ab7;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 8px;
+  font-size: 16px;
+  border: 1px solid #b39ddb;
+  padding: 10px;
+  cursor: pointer;
 }
 
 .list-btn-container {
