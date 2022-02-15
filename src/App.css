@@ -32,23 +32,3 @@
 .list-btn-container {
   margin: 10px;
 }
-
-/* .homeWidgets {
-  display: flex;
-  margin: 20px;
-} */
-
-/* @media only screen and (max-width: 768px) {
-  .featured {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .featured span {
-    margin: auto;
-  }
-
-  .featuredMoneyContainer {
-    flex-direction: column;
-  }
-} */

@@ -1,4 +1,23 @@
 .new-transaction-form {
-    width: 200px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 600px;
+}
+
+@media only screen and (max-width: 900px) {
+  .new-transaction-form {
+    width: 300px;
     height: 600px;
+  }
+
+  .new-transaction-form-input {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .new-transaction-form-input input {
+    width: 50%;
+  }
 }

@@ -22,7 +22,7 @@ const NewTransactionForm = () => {
   return (
     <Dialog isOpen={setShowForm} onDismiss={close}>
       <form className="new-transaction-form">
-        <div>
+        <div className="new-transaction-form-input">
           {" "}
           Recipient:
           <input
@@ -33,7 +33,7 @@ const NewTransactionForm = () => {
           />
         </div>
 
-        <div>
+        <div className="new-transaction-form-input">
           Amount:
           <input
             type="number"
@@ -42,7 +42,7 @@ const NewTransactionForm = () => {
           />
         </div>
 
-        <div>
+        <div className="new-transaction-form-input">
           Source:
           <input
             type="text"

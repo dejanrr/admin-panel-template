@@ -28,7 +28,7 @@ const UserList = () => {
           <div className="cell">User</div>
           <div className="cell">Email</div>
           <div className="cell">ID</div>
-          <div className="cell">Transaction</div>
+          <div className="cell amount-cell">Transaction</div>
           <div className="cell">Action</div>
         </div>
         {userRowsList?.length || newUsers?.length ? (

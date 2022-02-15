@@ -49,7 +49,7 @@ const Transaction = () => {
         </div>
         <div className="row">
           <div className="cell">John Doe</div>
-          <div className="cell">VUVX709ET7BY</div>
+          <div className="cell id-cell">VUVX709ET7BY</div>
           <div className="cell source-cell">
             Bank Account<span>****5496</span>
           </div>
@@ -57,7 +57,7 @@ const Transaction = () => {
         </div>
         <div className="row">
           <div className="cell">John Doe</div>
-          <div className="cell">23M3UOG65G8K</div>
+          <div className="cell id-cell">23M3UOG65G8K</div>
           <div className="cell source-cell">
             Bank Account<span>****3224</span>
           </div>
@@ -65,7 +65,7 @@ const Transaction = () => {
         </div>
         <div className="row">
           <div className="cell">John Doe</div>
-          <div className="cell">I133BCQWNNMK</div>
+          <div className="cell id-cell">I133BCQWNNMK</div>
           <div className="cell source-cell">
             Bank Account<span>****1124</span>
           </div>
@@ -73,7 +73,7 @@ const Transaction = () => {
         </div>
         <div className="row">
           <div className="cell">John Doe</div>
-          <div className="cell">OIPPPWG6M412</div>
+          <div className="cell id-cell">OIPPPWG6M412</div>
           <div className="cell source-cell">
             Bank Account<span>****6777</span>
           </div>

@@ -80,12 +80,12 @@
 @media only screen and (max-width: 1366px) {
   .featured {
     flex-direction: column;
-    overflow: hidden;
   }
 
   .featuredItem {
     text-align: center;
-    width: 100%;
+    width: 90%;
+    margin: auto;
   }
 
   .featuredMoneyContainer {

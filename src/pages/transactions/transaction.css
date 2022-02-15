@@ -51,4 +51,8 @@
   .row {
     flex-direction: column;
   }
+
+  .id-cell {
+    width: 40%;
+  }
 }
